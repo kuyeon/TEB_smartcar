@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!--arg name="x_init_pose" default="67.388"/-->
+  <arg name="x_init_pose" default="0.5"/>
+  <!--arg name="y_init_pose" default="4.481"/-->
+  <arg name="y_init_pose" default="0.5"/>
+  <arg name="z_init_pose" default="0.000"/>
+
+   <!-- LiDAR -->
+   <include file="$(find rplidar_ros)/launch/rplidar_s1.launch" >         
+   </include>
+   <!-- IMU -->
+   <include file="$(find razor_imu_9dof)/launch/razor-pub.launch" >         
+   </include>
+   <!-- AMCL -->
+   <include file="$(find teb_local_planner_smartcar)/launch/amcl_smartcar_base.launch" >         
+   </include>
+
+	<!-- tf & odom pkg -->
+	<node pkg="smartcar_tf_publisher" type="smartcar_tf_publisher_node" name="smartcar_tf_publisher"/>
+	<node pkg="smartcar_odom_publisher" type="smartcar_odom_publisher_node" name="smartcar_odom_publisher"/>
+        <!--  ************** Navigation ***************  -->
+	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+  	  	<rosparam file="$(find teb_local_planner_smartcar)/cfg/carlike/costmap_common_params.yaml" command="load" ns="global_costmap" />
+  	 	<rosparam file="$(find teb_local_planner_smartcar)/cfg/carlike/costmap_common_params.yaml" command="load" ns="local_costmap" />
+  		<rosparam file="$(find teb_local_planner_smartcar)/cfg/carlike/local_costmap_params.yaml" command="load" />
+  		<rosparam file="$(find teb_local_planner_smartcar)/cfg/carlike/global_costmap_params.yaml" command="load" />
+  		<rosparam file="$(find teb_local_planner_smartcar)/cfg/carlike/teb_local_planner_params.yaml" command="load" />
+
+        
+
+	<param name="base_global_planner" value="global_planner/GlobalPlanner" />
+	<param name="planner_frequency" value="1.0" />
+	<param name="planner_patience" value="5.0" />
+
+	<param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+	<param name="controller_frequency" value="5.0" />
+	<param name="controller_patience" value="15.0" />
+        <!-- reset frame_id parameters using user input data -->
+
+        <!--param name="TebLocalPlannerROS/map_frame" value="$(arg prefix)map"/-->
+        <!--param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /-->
+<!--
+        <param name="controller_frequency" value="10.0" />
+        <param name="controller_patience" value="15.0" /> -->
+        <param name="clearing_rotation_allowed" value="false" /> <!-- Our carlike robot is not able to rotate in place -->
+  
+      </node>  
+  	  <!--  **************** Visualisation ****************  -->
+	  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find teb_local_planner_smartcar)/cfg/rviz_navigation.rviz"/>
+</launch>
