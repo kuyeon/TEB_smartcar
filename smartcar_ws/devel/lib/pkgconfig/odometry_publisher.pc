@@ -1,0 +1,8 @@
+prefix=/home/kuyeon/smartcar_ws/devel
+
+Name: odometry_publisher
+Description: Description of odometry_publisher
+Version: 0.2.3
+Cflags: 
+Libs: -L/home/kuyeon/smartcar_ws/devel/lib 
+Requires: 

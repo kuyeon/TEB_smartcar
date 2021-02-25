@@ -1,0 +1,8 @@
+prefix=/home/kuyeon/smartcar_ws/devel
+
+Name: pagv_odom_publisher
+Description: Description of pagv_odom_publisher
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/kuyeon/smartcar_ws/devel/lib 
+Requires: 

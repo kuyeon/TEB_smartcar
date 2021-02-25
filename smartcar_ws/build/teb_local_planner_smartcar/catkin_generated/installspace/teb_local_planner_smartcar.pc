@@ -1,0 +1,8 @@
+prefix=/home/kuyeon/smartcar_ws/install
+
+Name: teb_local_planner_smartcar
+Description: Description of teb_local_planner_smartcar
+Version: 0.2.4
+Cflags: 
+Libs: -L/home/kuyeon/smartcar_ws/install/lib 
+Requires: 

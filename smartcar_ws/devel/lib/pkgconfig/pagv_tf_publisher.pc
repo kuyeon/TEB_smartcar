@@ -1,0 +1,8 @@
+prefix=/home/kuyeon/smartcar_ws/devel
+
+Name: pagv_tf_publisher
+Description: Description of pagv_tf_publisher
+Version: 0.0.0
+Cflags: -I/home/kuyeon/smartcar_ws/src/pagv_tf_publisher/include
+Libs: -L/home/kuyeon/smartcar_ws/devel/lib -lpagv_tf_publisher
+Requires: geometry_msgs roscpp tf

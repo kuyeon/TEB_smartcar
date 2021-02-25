@@ -1,0 +1,8 @@
+prefix=/home/kuyeon/smartcar_ws/devel
+
+Name: rb1_base_navigation
+Description: Description of rb1_base_navigation
+Version: 1.1.0
+Cflags: 
+Libs: -L/home/kuyeon/smartcar_ws/devel/lib 
+Requires: 

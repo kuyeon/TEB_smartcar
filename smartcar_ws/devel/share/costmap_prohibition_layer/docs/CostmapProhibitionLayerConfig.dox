@@ -1,0 +1,7 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~enabled" : \b [bool] Whether to apply this plugin or not min: False, default: True, max: True
+- \b "~fill_polygons" : \b [bool] Whether to fill polygon cells or not min: False, default: True, max: True
+

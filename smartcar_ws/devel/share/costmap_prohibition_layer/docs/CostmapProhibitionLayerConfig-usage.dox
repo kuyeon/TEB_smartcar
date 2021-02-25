@@ -1,0 +1,8 @@
+\subsubsection usage Usage
+\verbatim
+<node name="costmap_prohibition_layer_namespace" pkg="costmap_prohibition_layer_namespace" type="costmap_prohibition_layer_namespace">
+  <param name="enabled" type="bool" value="True" />
+  <param name="fill_polygons" type="bool" value="True" />
+</node>
+\endverbatim
+

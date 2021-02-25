@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<launch>
+  
+  <include file="$(find lms1xx)/launch/LMS111_multi.launch"/>
+  <include file="$(find amr_bringup)/launch/amr_cnu.launch"/>
+  <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch"/>
+
+  
+  <!--node name="pagv_tf_publisher" pkg="pagv_tf_publisher" type="pagv_tf_publisher_node" /-->
+
+  <node name="pagv_odom_publisher" pkg="pagv_odom_publisher" type="pagv_odom_publisher_node" output="screen"/>
+  <node name="rviz" pkg="rviz" type="rviz"/>
+  
+  <node name="pagv_teleop_keyboard" pkg="pagv_teleop_keyboard" type="pagv_teleop_keyboard_node"/>
+
+</launch>
+
+ 
+   
+ 
+   

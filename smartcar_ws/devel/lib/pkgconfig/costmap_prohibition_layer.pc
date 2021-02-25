@@ -1,0 +1,8 @@
+prefix=/home/kuyeon/smartcar_ws/devel
+
+Name: costmap_prohibition_layer
+Description: Description of costmap_prohibition_layer
+Version: 0.0.5
+Cflags: -I/home/kuyeon/smartcar_ws/devel/include -I/home/kuyeon/smartcar_ws/src/costmap_prohibition_layer/include
+Libs: -L/home/kuyeon/smartcar_ws/devel/lib -lcostmap_prohibition_layer
+Requires: costmap_2d dynamic_reconfigure

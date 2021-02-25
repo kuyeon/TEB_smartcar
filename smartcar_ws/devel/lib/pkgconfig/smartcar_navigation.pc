@@ -1,0 +1,8 @@
+prefix=/home/kuyeon/smartcar_ws/devel
+
+Name: smartcar_navigation
+Description: Description of smartcar_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/kuyeon/smartcar_ws/devel/lib 
+Requires: 

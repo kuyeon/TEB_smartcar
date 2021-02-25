@@ -1,0 +1,8 @@
+prefix=/home/kuyeon/smartcar_ws/devel
+
+Name: imu_listener
+Description: Description of imu_listener
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/kuyeon/smartcar_ws/devel/lib 
+Requires: 

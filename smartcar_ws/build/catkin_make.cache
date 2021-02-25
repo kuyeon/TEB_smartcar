@@ -1,0 +1,2 @@
+costmap_prohibition_layer:razor_imu_9dof:rplidar_ros:smartcar_odom_publisher:smartcar_tf_publisher:teb_local_planner_smartcar
+-DCATKIN_DEVEL_PREFIX=/home/kuyeon/smartcar_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kuyeon/smartcar_ws/install -G Unix Makefiles
